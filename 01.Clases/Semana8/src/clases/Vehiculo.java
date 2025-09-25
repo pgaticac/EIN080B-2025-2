@@ -90,7 +90,7 @@ public class Vehiculo {
 
     @Override
     public String toString() {
-        return "Vehiculo{" + "patente=" + patente + ", marca=" + marca + ", modelo=" + modelo + ", velocidad=" + velocidad + ", marcha=" + marcha + ", velocidadMax=" + velocidadMax + ", marchaMaxima=" + marchaMaxima + ", conductor=" + conductor + '}';
+        return "patente=" + patente + "\n marca=" + marca + "\n modelo=" + modelo + "\n velocidad=" + velocidad + "\n marcha=" + marcha + "\n velocidadMax=" + velocidadMax + "\n marchaMaxima=" + marchaMaxima + "\n conductor=" + conductor.getNombre() + " " + conductor.getApellido();
     }
 
    

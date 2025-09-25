@@ -4,6 +4,7 @@ package clases;
 
 public class Conductor {
     private String nombre;
+    private String apellido;
 
     public Conductor() {
     }
@@ -20,9 +21,18 @@ public class Conductor {
         this.nombre = nombre;
     }
 
+    public String getApellido() {
+        return apellido;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
+
+    
     @Override
     public String toString() {
-        return "Conductor{" + "nombre=" + nombre + '}';
+        return this.nombre;
     }
     
     
