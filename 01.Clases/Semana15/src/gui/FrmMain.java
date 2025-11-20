@@ -10,11 +10,13 @@ package gui;
  */
 public class FrmMain extends javax.swing.JFrame {
 
-    /**
-     * Creates new form FrmMain
-     */
+    FrmAccion1 a1;
+    FrmAccion2 a2;
+
     public FrmMain() {
         initComponents();
+        this.setLocationRelativeTo(null);
+        initGUI();
     }
 
     /**
@@ -65,7 +67,7 @@ public class FrmMain extends javax.swing.JFrame {
 
         mnuEdit.setText("Acciones");
 
-        mnuAccion1.setText("Acción 1");
+        mnuAccion1.setText("Vehiculos");
         mnuAccion1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mnuAccion1ActionPerformed(evt);
@@ -74,6 +76,11 @@ public class FrmMain extends javax.swing.JFrame {
         mnuEdit.add(mnuAccion1);
 
         mnuAccion2.setText("Acción 2");
+        mnuAccion2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnuAccion2ActionPerformed(evt);
+            }
+        });
         mnuEdit.add(mnuAccion2);
 
         jMenuBar1.add(mnuEdit);
@@ -99,12 +106,18 @@ public class FrmMain extends javax.swing.JFrame {
     }//GEN-LAST:event_mnuSalirActionPerformed
 
     private void mnuAccion1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuAccion1ActionPerformed
-        FrmAccion1 a1 = new FrmAccion1();
-        desk1.add(a1);
-        desk1.setSelectedFrame(a1);
+        hideFrames();
+        a1.setSize(desk1.getSize());
         a1.setVisible(true);
-        a1.pack();
+        a1.show();
+
     }//GEN-LAST:event_mnuAccion1ActionPerformed
+
+    private void mnuAccion2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuAccion2ActionPerformed
+        hideFrames();
+        a2.setVisible(true);
+        a2.show();
+    }//GEN-LAST:event_mnuAccion2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -150,4 +163,29 @@ public class FrmMain extends javax.swing.JFrame {
     private javax.swing.JMenu mnuFile;
     private javax.swing.JMenuItem mnuSalir;
     // End of variables declaration//GEN-END:variables
+
+    private void initGUI() {
+        a1 = new FrmAccion1();
+        a2 = new FrmAccion2();
+        
+        a1.setSize(desk1.getSize());
+        a2.setSize(desk1.getSize());
+        
+        
+        desk1.add(a1);
+        desk1.add(a2);
+        
+        a1.pack();
+        a1.setUI(null);
+        
+        a2.pack();
+        a2.setUI(null);
+        
+        
+    }
+
+    private void hideFrames() {
+        a1.setVisible(false);
+        a2.setVisible(false);
+    }
 }

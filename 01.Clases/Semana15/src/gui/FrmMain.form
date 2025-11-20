@@ -34,7 +34,7 @@
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="mnuAccion1">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Acci&#xf3;n 1"/>
+                <Property name="text" type="java.lang.String" value="Vehiculos"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnuAccion1ActionPerformed"/>
@@ -44,6 +44,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Acci&#xf3;n 2"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnuAccion2ActionPerformed"/>
+              </Events>
             </MenuItem>
           </SubComponents>
         </Menu>
