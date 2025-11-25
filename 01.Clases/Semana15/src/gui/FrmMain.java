@@ -4,6 +4,8 @@
  */
 package gui;
 
+import clases.RegistroVehiculos;
+
 /**
  *
  * @author labinf
@@ -13,10 +15,11 @@ public class FrmMain extends javax.swing.JFrame {
     FrmAccion1 a1;
     FrmAccion2 a2;
 
-    public FrmMain() {
+        public FrmMain() {
         initComponents();
         this.setLocationRelativeTo(null);
         initGUI();
+
     }
 
     /**
@@ -167,21 +170,19 @@ public class FrmMain extends javax.swing.JFrame {
     private void initGUI() {
         a1 = new FrmAccion1();
         a2 = new FrmAccion2();
-        
+
         a1.setSize(desk1.getSize());
         a2.setSize(desk1.getSize());
-        
-        
+
         desk1.add(a1);
         desk1.add(a2);
-        
+
         a1.pack();
         a1.setUI(null);
-        
+
         a2.pack();
         a2.setUI(null);
-        
-        
+
     }
 
     private void hideFrames() {
